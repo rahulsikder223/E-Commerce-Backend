@@ -25,7 +25,7 @@ namespace Basket.API.Controllers
         public async Task<ActionResult<ShoppingCart>> GetBasket(string username)
         {
             var basket = await _repository.GetBasket(username);
-            return Ok(basket ?? new ShoppingCart(username)); // If for the first time the client wants to add an item in the basket, it will create a basket for him...
+            return Ok(basket ?? new ShoppingCart(username));
         }
 
         [HttpPost]
