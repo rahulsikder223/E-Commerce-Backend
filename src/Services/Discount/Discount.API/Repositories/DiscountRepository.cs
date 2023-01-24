@@ -58,7 +58,7 @@ namespace Discount.API.Repositories
         public async Task<bool> UpdateDiscount(Coupon coupon)
         {
             using var connection = new NpgsqlConnection(_configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
-            var affected = await connection.ExecuteAsync("UPDATE Coupon SET ProductName=@ProductName, Description=@Descriptin, Amount=@Amount WHERE Id=@Id",
+            var affected = await connection.ExecuteAsync("UPDATE Coupon SET ProductName=@ProductName, Description=@Description, Amount=@Amount WHERE Id=@Id",
                 new
                 {
                     ProductName = coupon.ProductName,
