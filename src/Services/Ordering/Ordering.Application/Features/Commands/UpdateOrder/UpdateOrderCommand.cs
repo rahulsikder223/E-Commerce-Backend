@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ordering.Application.Features.Commands.CheckoutOrder
+namespace Ordering.Application.Features.Commands.UpdateOrder
 {
-    public class CheckoutOrderCommand : IRequest<int> // Returns the id of the newly added Order...
+    public class UpdateOrderCommand : IRequest
     {
+        public int Id { get; set; }
         public string UserName { get; set; }
         public decimal TotalPrice { get; set; }
 
