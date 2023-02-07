@@ -32,7 +32,6 @@ namespace Ordering.Application.Features.Commands.UpdateOrder
 
             if (orderToUpdate == null)
             {
-                _logger.LogError("Order does not exist...");
                 throw new NotFoundException(nameof(Order), request.Id);
             }
 
