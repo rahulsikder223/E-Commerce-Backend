@@ -53,7 +53,6 @@ namespace Basket.API
                     configurator.Host(Configuration["EventBusSettings:HostAddress"]);
                 });
             });
-            //services.AddMassTransitHostedService();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

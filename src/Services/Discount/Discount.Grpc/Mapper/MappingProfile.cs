@@ -4,9 +4,9 @@ using AutoMapper;
 
 namespace Discount.Grpc.Mapper
 {
-    public class DiscountProfile : Profile
+    public class MappingProfile : Profile
     {
-        public DiscountProfile()
+        public MappingProfile()
         {
             CreateMap<Coupon, CouponModel>().ReverseMap();
         }
